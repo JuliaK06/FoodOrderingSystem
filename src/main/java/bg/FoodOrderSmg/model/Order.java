@@ -32,13 +32,12 @@ public class Order {
         listofProducts=new ArrayList<ProductsInOrder>();
     }
 
-    public Order(long id, User user, Status status, PaymentStatus paymentStatus, double total_price, PaymentStatus payment, List<ProductsInOrder> listofProducts, String deliveryAddress) {
+    public Order(long id, User user, Status status, PaymentStatus paymentStatus, double total_price, List<ProductsInOrder> listofProducts, String deliveryAddress) {
         this.id = id;
         this.user = user;
         this.status = status;
         this.paymentStatus = paymentStatus;
         this.total_price = total_price;
-        this.payment = payment;
         this.listofProducts = listofProducts;
         this.deliveryAddress = deliveryAddress;
     }
@@ -83,13 +82,7 @@ public class Order {
         this.total_price = total_price;
     }
 
-    public PaymentStatus getPayment() {
-        return payment;
-    }
 
-    public void setPayment(PaymentStatus payment) {
-        this.payment = payment;
-    }
 
     public List<ProductsInOrder> getListofProducts() {
         return listofProducts;
